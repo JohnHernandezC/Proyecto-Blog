@@ -8,4 +8,5 @@ urlpatterns = [
     path('tecnologia',tecnologia,name='Tecnologia'),
     path('programacion',programacion,name='Programacion'),
     path('videojuego',videojuegos,name='Videojuegos'),
+    path('<slug:slug>/',detalles,name='detalles_post'),
 ]
