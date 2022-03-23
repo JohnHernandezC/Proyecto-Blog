@@ -109,6 +109,32 @@
                 </div>
             </div>
         </div>
+        <!-- paginador-->
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6 float-right">
+                    {% if post.has_previous %}
+
+                    <div>
+                        <a href="?page={{ post.prevoius_page_number}} {% if request.GET.search %} &q={{ request.GET.search }} {% endif %}" class="btn btn-primary float-right">Anterior</a>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6 float-right">
+                    {% if post.has_next %}
+
+                    <div>
+                        <a href="?page={{ post.next_page_number}} {% if request.GET.search %} &q={{ request.GET.search }} {% endif %}" class="btn btn-primary float-right">Siguiente</a>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
         
         <!-- Footer-->
         <footer class="border-top">
